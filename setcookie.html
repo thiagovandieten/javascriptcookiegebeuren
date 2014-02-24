@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cookie set</title>
+</head>
+<body>
+
+<form method="post" action="getcookie.html" onsubmit="maakCookieAan()">
+	<label for="voornaam"> Voornaam: </label>
+	<input type="text" name="voornaam" id="voornaam"> </input>
+
+	<br>
+
+	<label for="voornaam"> Achternaam: </label>
+	<input type="text" name="Achternaam" id="achternaam"> </input>
+
+	<input type="submit" value="tada">
+</form>
+
+<script type="text/javascript">
+	var maakCookieAan = function () 
+	{
+		var voornaam = document.getElementById('voornaam').value;
+		var achternaam = document.getElementById('achternaam').value;
+		document.cookie = 'voornaam = ' + voornaam;
+		document.cookie = 'achternaam = ' + achternaam;
+	}
+</script>
+
+</body>
+
+
+</html>

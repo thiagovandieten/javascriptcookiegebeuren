@@ -1,0 +1,20 @@
+<!-- Even serieus Stephan, niemand wilt met Regexen gaan werken. Overweeg de cookie library van MDN op: http://mzl.la/1c226ZB
+	Of die van Quirksmode:   http://www.quirksmode.org/js/cookies.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cookie get</title>
+</head>
+<body>
+	<p>Hallo, ik ken jou nog van setcookie.html! Jij bent:  <span id="fullname"> </span></p>
+</body>
+<script type="text/javascript">
+	//de document.ready equalivant van JS, wel IE9+ gebruiken hoor!
+	var voornaam =  document.cookie.replace(/(?:(?:^|.*;\s*)voornaam\s*\=\s*([^;]*).*$)|^.*$/, "$1")
+	var achternaam =  document.cookie.replace(/(?:(?:^|.*;\s*)achternaam\s*\=\s*([^;]*).*$)|^.*$/, "$1")
+	document.addEventListener('DOMContentLoaded', function(){
+		document.getElementById('fullname').textContent = voornaam + ' ' + achternaam;
+});
+</script>
+</html>
